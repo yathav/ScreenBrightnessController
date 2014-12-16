@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.example.base64StrToImageConverter"
+      version="0.1.0">
+    <name>ScreeenBrightnessControl</name>
+    <description>Sample PhoneGap Screen Brightnesss Control Plugin</description>
+    <license>MIT</license>
+    <keywords>Summa,Onnum Illa</keywords>
+
+
+    <js-module src="www/js/screenBrightnessControlPlugin.js" name="screenBrightnessControlPlugin">
+        <clobbers target="window.screenBrightnessControlPlugin" />
+    </js-module>
+
+	<!-- ios -->
+	<platform name="ios">    
+	        <config-file target="config.xml" parent="/*">
+	            <feature name="ScreenBrightnessControl">
+	                <param name="ios-package" value="ScreenBrightnessControl" /> 
+	            </feature>
+	        </config-file>
+	        <header-file src="src/ios/ScreenBrightnessControl.h" />
+		    <source-file src="src/ios/ScreenBrightnessControl.m" />
+	 </platform>
+
+</plugin>
+
